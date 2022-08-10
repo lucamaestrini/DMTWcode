@@ -1,0 +1,14 @@
+Package: DMTWpackage
+Type: Package
+Title: A package for performing Variational Bayesian Inference on Linear Mixed Models with Nested Random Effects
+Version: 0.1.0
+Author: Emanuele Degani
+Maintainer: Emanuele Degani <degani@stat.unipd.it>
+Description: The package provides functions for performing Naïve and Streamlined Variational Bayesian Inference on Linear Mixed Models with Nested (both 'two-level' and 'three-level') Random Effects and Fixed Effects admitting classical Gaussian prior specification (as in Nolan et al., 2020) or shrinkage-inducing global-local prior specification (as in Degani et al., 2021). For the latter specification, the functions implements the 'Laplace', 'Horseshoe' and 'Normal-Exponential-Gamma' distributions.
+    All the functions are implemented in the low-level C++ language. See the aforementioned references for insights.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports: Rcpp, RcppArmadillo
+LinkingTo: Rcpp, RcppArmadillo
+SystemRequirements: C++11

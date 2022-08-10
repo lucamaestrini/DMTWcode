@@ -1,0 +1,117 @@
+
+-----------------------------------o---O---o------------------------------------
+
+                        Computer Code Corresponding to:
+
+             Sparse Linear Mixed Model Selection via Streamlined Variational Bayes
+
+                  by E. Degani, L. Maestrini, D. Toczydlowska
+                               and M. P. Wand (2021)
+
+                            Last changed: 07 JAN 2022
+
+-----------------------------------o---O---o------------------------------------
+
+  The R package named 'DMTWpackage' contains functions for performing Naïve and
+Streamlined Variational Bayesian Inference on Linear Mixed Models with Nested
+('two-level' or 'three-level') Random Effects and Fixed Effects admitting a
+Gaussian prior specification (as in Nolan et al., 2020) or shrinkage-inducing
+global-local prior specifications (as in Degani et al., 2021).
+For the latter family of priors, the package contains functions for the
+'Laplace', 'Horseshoe' and 'Normal-Exponential-Gamma' distributions.
+
+  All the functions are implemented in the low-level C++ language, and are
+contained in the 'src' folder. Their content is summarised in the following table.
+The input description is described within each file.
+
+--------------------------------------------------------------------------------
+file name                                       description
+--------------------------------------------------------------------------------
+        
+        *** Naïve Mean Field Variational Bayes Algorithms functions ***
+
+NaiveMfvbLmmTwoLevelGaussPrior.cpp              C++ function for performing the
+                                                naïve mean field variational
+                                                Bayes algorithm over a two-level
+                                                linear mixed model having a
+                                                multivariate Gaussian prior
+                                                specification for beta^S.
+
+NaiveMfvbLmmThreeLevelGaussPrior.cpp            C++ function for performing the
+                                                naïve mean field variational
+                                                Bayes algorithm over a three-level
+                                                linear mixed model having a
+                                                multivariate Gaussian prior
+                                                specification for beta^S.
+
+NaiveMfvbLmmTwoLevelGlobLocPrior.cpp            C++ function for performing the
+                                                naïve mean field variational
+                                                Bayes algorithm over a two-level
+                                                linear mixed model having a
+                                                global-local prior specification
+                                                for each element of beta^S.
+
+NaiveMfvbLmmThreeLevelGlobLocPrior.cpp          C++ function for performing the
+                                                naïve mean field variational
+                                                Bayes algorithm over a three-level
+                                                linear mixed model having a
+                                                global-local prior specification
+                                                for each element of beta^S.
+
+       *** Streamlined Mean Field Variational Bayes Algorithms functions ***
+
+StreamlinedMfvbLmmTwoLevelGaussPrior.cpp        C++ function for performing the
+                                                streamlined mean field variational
+                                                Bayes algorithm over a two-level
+                                                linear mixed model having a
+                                                multivariate Gaussian prior
+                                                specification for beta^S.
+                                                It implements Algorithm 1 of
+                                                Nolan et al. (2020).
+
+StreamlinedMfvbLmmThreeLevelGaussPrior.cpp	      C++ function for performing the
+                                                streamlined mean field variational
+                                                Bayes algorithm over a three-level
+                                                linear mixed model having a
+                                                multivariate Gaussian prior
+                                                specification for beta^S.
+                                                It implements Algorithm 5 of
+                                                Nolan et al. (2020).
+
+StreamlinedMfvbLmmTwoLevelGlobLocPrior.cpp	      C++ function for performing the
+                                                streamlined mean field variational
+                                                Bayes algorithm over a two-level
+                                                linear mixed model having a
+                                                global-local prior specification
+                                                for each element of beta^S.
+                                                It implements Algorithm 2 of
+                                                Degani et al. (2021).
+
+StreamlinedMfvbLmmThreeLevelGlobLocPrior.cpp    C++ function for performing the
+                                                streamlined mean field variational
+                                                Bayes algorithm over a three-level
+                                                linear mixed model having a
+                                                global-local prior specification
+                                                for each element of beta^S.
+                                                It implements Algorithm 3 of
+                                                Degani et al. (2021).
+
+                     *** Additional Algorithms functions ***
+
+Lentz_Q.cpp                                     C++ function for computing the Q
+                                                function defined in (A.3) of
+                                                Neville, Ormerod and Wand (2014)
+                                                and implemented with Lentz's
+                                                Algorithm in Algorithm 2 of the
+                                                same paper.
+
+Lentz_R_nu.cpp                                  C++ function for computing the
+                                                R_nu function defined in (A.4) of
+                                                Neville, Ormerod & Wand (2014)
+                                                and implemented with Lentz's
+                                                Algorithm in Algorithm 4 of the
+                                                same paper.
+
+--------------------------------------------------------------------------------
+
+-----------------------------------o---O---o------------------------------------
